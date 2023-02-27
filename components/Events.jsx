@@ -36,19 +36,19 @@ export default function Events() {
         </div>
         <p className="text--md mb-6">
         Find more current news and interesting events on the{" "}
-          <Link href={"/"} className="underline">
+          <Link href={"/"} className="underline hover:bg-[#4A4A4A]">
             News and events page.
           </Link>
         </p>
         <div className="flex gap-4 flex-col sm:flex-row sm:flex-wrap">
           {data.map((el, i) => {
             return (
-              <div key={i} className={`border border-white ${i === 0 ? 'w-full md:w-auto md:flex-1' : 'flex-1'}`}>
+              <div key={i} className={`group border border-white ${i === 0 ? 'w-full md:w-auto md:flex-1' : 'flex-1'}`}>
                 <div className="relative w-full aspect-[819/356]">
-                  <Image alt="" src={el.img} fill />
+                  <Image alt="" src={el.img} className="group-hover:brightness-50" fill />
                 </div>
                 <div className="p-4">
-                  <h4 className="text--md">{el.title}</h4>
+                  <h4 className="text--md group-hover:bg-[#4A4A4A]">{el.title}</h4>
                   <p className="text mb-[28px] mt-[25px]">{el.text}</p>
                   <span className="text--sm">{el.date}</span>
                 </div>
