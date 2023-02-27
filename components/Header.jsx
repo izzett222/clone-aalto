@@ -7,6 +7,7 @@ import world from "/public/world.svg";
 import heart from "/public/heart.svg";
 import down from "/public/down.svg";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const data = [
@@ -36,9 +37,18 @@ export default function Header() {
       text: "Menu",
     },
   ];
+
+  const [scrolled, setScrolled] = useState(false)
+  useEffect(() => {
+    const handleScrolled = () => {
+      window.scrollY > 100 ? setScrolled(true) : setScrolled(false)
+    }
+    document.addEventListener("scroll", handleScrolled)
+    return () => document.removeEventListener("scroll", handleScrolled)
+  }, [])
   return (
-    <header className="px-4 md:pl-20 md:pr-14 flex  justify-between items-center h-[50px]  md:h-[110px] text-white">
-      <Image src={logo} alt="" className="h-[33px] w-[37px] md:w-[98px] md:h-[69px]" />
+    <header className={`fixed top-0 inset-x-0 z-30 bg-[#2d2d2d] border-b border-b-white px-4 md:pl-20 md:pr-14 flex  justify-between items-center h-[50px]  ${scrolled ? "md:h-[50px]" : 'md:h-[110px]'} duration-500 text-white`}>
+      <Image src={logo} alt="" className={`h-[33px] w-[37px] ${scrolled ? 'md:h-10 md:w-10' : 'md:w-[98px] md:h-[69px]'} duration-500`} />
       <div className="hidden md:flex text-white items-center gap-1 lg:gap-6 xl:gap-10">
         {data.map((el, id) => {
           if (el.line) {

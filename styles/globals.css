@@ -16,4 +16,7 @@
 .heading {
   @apply text-[28px] leading-[33px] text-white
 }
+.flex-flow {
+  flex-flow: column wrap;
+}
 @tailwind utilities;
