@@ -14,12 +14,12 @@ export default function Header() {
     {
       img: lock,
       text: "For personnel",
-      link: "/",
+      link: "/personnel",
     },
     {
       img: heart,
       text: "Support",
-      link: "/",
+      link: "/support",
     },
     {
       line: true,
