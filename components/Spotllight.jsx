@@ -26,7 +26,7 @@ export default function Spotlight() {
     },
   ];
   return (
-    <div className="pt-20 md:pt-10 xl:pt-20 py-[72px]">
+    <div className="pt-10 md:pt-10 xl:pt-20 pb-[56px]">
       <Wrapper>
         <div className="flex justify-between mb-4 items-center">
           <h2 className="heading">Spotlight</h2>
@@ -49,7 +49,7 @@ export default function Spotlight() {
                 </div>
                 <div className="p-4">
                   <h4 className="text--md group-hover:bg-[#4A4A4A] w-fit">{el.title}</h4>
-                  <p className="text mb-[28px] mt-[25px]">{el.text}</p>
+                  <p className="text mb-14 mt-[25px]">{el.text}</p>
                   <span className="text--sm">{el.date}</span>
                 </div>
               </div>

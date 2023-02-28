@@ -179,7 +179,7 @@ export default function Explore() {
                       <Image
                         src={el.img}
                         alt=""
-                        className="w-[88px] h-[88px] rounded-full group-hover:brightness-75"
+                        className="w-16 h-16 md:w-[88px] md:h-[88px] rounded-full group-hover:brightness-75"
                       />
                       <span className="text--md group-hover:bg-[#4A4A4A]">{el.text}</span>
                     </div>
@@ -197,7 +197,7 @@ export default function Explore() {
             Scientific research and artistic activities are carried out at six
             schools and their departments and units.
           </p>
-          <div className="gap-y-2 sm:gap-y-6 gap-x-4 grid md:grid-cols-2">
+          <div className="gap-y-2 sm:gap-y-2 gap-x-4 grid md:grid-cols-2">
             {schools.map((el, i) => {
               return (
                 <div

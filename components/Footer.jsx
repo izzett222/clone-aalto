@@ -25,7 +25,7 @@ export default function Footer() {
     <footer className="bg-[#2D2D2D] pt-2.5">
       <div className="border-t border-t-white pt-6">
         <Wrapper>
-          <div className="flex flex-col sm:flex-row flex-wrap border-b border-b-white pb-6">
+          <div className="flex flex-col gap-12 sm:gap-0 sm:flex-row flex-wrap border-b border-b-white pb-6">
             <div className="w-auto sm:w-1/2 md:w-[33.333333%] xl:w-1/4  pr-8 order-1">
               <div>
                 <Image src={logo} className="w-[98px] h-[69px] mb-6" alt="" />
@@ -36,7 +36,7 @@ export default function Footer() {
                   Switchboard: +358 9 47001
                 </p>
                 <p className="text--md mt-6 mb-2">Follow us:</p>
-                <div className="flex items-center">
+                <div className="flex items-center justify-between sm:justify-start">
                   {data.map((el, i) => {
                     return (
                       <div key={i} className="p-1 w-8 h-8">
@@ -134,7 +134,7 @@ export default function Footer() {
         </Wrapper>
       </div>
       <Wrapper>
-        <div className="flex flex-col sm:flex-row justify-between pt-6 pb-10 gap-16 sm:gap-0">
+        <div className="flex flex-col sm:flex-row justify-between pt-6 pb-10 gap-10 sm:gap-0">
           <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-3">
             {[
               "Privacy",

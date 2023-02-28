@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-[#2D2D2D] pt-[110px]">
+    <div className="bg-[#2D2D2D] pt-[50px] md:pt-[110px]">
       <Header />
       <Hero />
       <Spotlight />

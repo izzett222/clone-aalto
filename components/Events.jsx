@@ -26,7 +26,7 @@ export default function Events() {
     },
   ];
   return (
-    <div className="pt-20 md:pt-10 xl:pt-20 py-[72px] bg-[#252525]">
+    <div className="pt-14 md:pt-10 xl:pt-20 pb-[96px] bg-[#252525]">
       <Wrapper>
         <div className="flex justify-between mb-4 items-center">
           <h2 className="heading">Join our many events</h2>
@@ -43,7 +43,7 @@ export default function Events() {
         <div className="flex gap-4 flex-col sm:flex-row sm:flex-wrap">
           {data.map((el, i) => {
             return (
-              <div key={i} className={`group border border-white ${i === 0 ? 'w-full md:w-auto md:flex-1' : 'flex-1'}`}>
+              <div key={i} className={`group bg-[#2D2D2D] ${i === 0 ? 'w-full md:w-auto md:flex-1' : 'flex-1'}`}>
                 <div className="relative w-full aspect-[819/356]">
                   <Image alt="" src={el.img} className="group-hover:brightness-50" fill />
                 </div>
