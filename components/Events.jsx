@@ -48,7 +48,7 @@ export default function Events() {
                   <Image alt="" src={el.img} className="group-hover:brightness-50" fill />
                 </div>
                 <div className="p-4">
-                  <h4 className="text--md group-hover:bg-[#4A4A4A]">{el.title}</h4>
+                  <h4 className="text--md group-hover:bg-[#4A4A4A] w-fit">{el.title}</h4>
                   <p className="text mb-[28px] mt-[25px]">{el.text}</p>
                   <span className="text--sm">{el.date}</span>
                 </div>

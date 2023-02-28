@@ -173,15 +173,15 @@ export default function Explore() {
                 return (
                   <div
                     key={i}
-                    className="w-[258px] mx-auto sm:mx-0 sm:w-auto flex-1 flex justify-center"
+                    className="group w-[258px] mx-auto sm:mx-0 sm:w-auto flex-1 flex justify-center"
                   >
                     <div className="w-full sm:w-auto flex gap-2 sm:gap-0 sm:flex-col md:flex-row md:gap-2 items-center">
                       <Image
                         src={el.img}
                         alt=""
-                        className="w-[88px] h-[88px] rounded-full"
+                        className="w-[88px] h-[88px] rounded-full group-hover:brightness-75"
                       />
-                      <span className="text--md">{el.text}</span>
+                      <span className="text--md group-hover:bg-[#4A4A4A]">{el.text}</span>
                     </div>
                   </div>
                 );
@@ -202,10 +202,10 @@ export default function Explore() {
               return (
                 <div
                   key={i}
-                  className="flex h-[82px] sm:h-[120px] md:h-40 border border-white"
+                  className="flex h-[82px] sm:h-[120px] md:h-40 border border-white group"
                 >
-                  <div className="flex-1  flex flex-col justify-end px-3 sm:px-6 pt-3 sm:pt-6 pb-2 sm:pb-4">
-                    <h3 className="text--md mb-2 max-h-[50px] overflow-hidden">{el.title}</h3>
+                  <div className="flex-1 flex flex-col justify-end px-3 sm:px-6 pt-3 sm:pt-6 pb-2 sm:pb-4">
+                    <h3 className="text--md mb-2 max-h-[50px] overflow-hidden group-hover:bg-[#4A4A4A]">{el.title}</h3>
                     <div className="overflow-hidden w-full h-[25px] hidden sm:block">
                       <p className="text--sm overflow-hidden h-[25px]">
                         {el.text}
@@ -213,7 +213,7 @@ export default function Explore() {
                     </div>
                   </div>
                   <div className="w-[82px] h-[82px] sm:w-[120px] sm:h-[120px] md:w-40 md:h-40 relative">
-                    <Image src={el.img} alt="" fill className="object-cover" />
+                    <Image src={el.img} alt="" fill className="object-cover group-hover:brightness-[0.8]" />
                   </div>
                 </div>
               );
@@ -248,14 +248,14 @@ export default function Explore() {
                           <Link
                             href="/"
                             key={i}
-                            className="flex text items-center gap-2.5 mb-4"
+                            className="flex text items-center gap-2.5 mb-4 group hover:bg-[#4A4A4A] w-fit group"
                           >
                             <Image
                               src={right}
                               alt=""
-                              className="text w-5 h-5"
+                              className="text w-5 h-5 group-hover:translate-x-1 duration-300"
                             />
-                            <span className="underline">{el}</span>
+                            <span className="underline ">{el}</span>
                           </Link>
                         );
                       })}
@@ -266,14 +266,14 @@ export default function Explore() {
             );
           })}
         </div>
-        <div className="flex flex-wrap content-start mb-14">
+        <div className="flex flex-col h-[1110px] sm:h-[720px] md:h-[850px] xl:h-[574px] flex-wrap content-start mb-14">
           {blogs.map((el, i) => {
             return (
-              <div key={i} className="px-1 pb-2 w-1/2 sm:w-[33.333333%] xl:w-1/4 h-min">
+              <div key={i} className="px-1 pb-2 w-1/2 sm:w-[33.333333%] xl:w-1/4 h-min group">
                 <div className="relative aspect-[251/167]">
-                  <Image src={el.img} alt="" fill />
+                  <Image src={el.img} alt="" fill className="group-hover:brightness-[0.8]" />
                 </div>
-                <p className="text--sm pt-1 mb-1">{el.text}</p>
+                <p className="text--xs pt-1 mb-1 text-[#e3e3e3]">{el.text}</p>
               </div>
             );
           })}
@@ -282,9 +282,9 @@ export default function Explore() {
             <h2 className="heading text-center mb-4">Community voices</h2>
             <div className="flex flex-col sm:flex-row gap-4 sm;gap-10 items-center">
                 {voices.map((el, i) => {
-                    return <div key={i} className="flex sm:flex-col sm:justify-center sm:flex-1 md:flex-row items-center gap-2">
-                        <Image src={el.img} alt="" className="w-16 h-16 rounded-full" />
-                        <p className="text">{el.text}</p>
+                    return <div key={i} className="flex group sm:flex-col hover:cursor-pointer sm:justify-center sm:flex-1 md:flex-row items-center gap-2">
+                        <Image src={el.img} alt="" className="w-16 h-16 rounded-full group-hover:brightness-[0.8]" />
+                        <p className="text group-hover:bg-[#4A4A4A]">{el.text}</p>
                     </div>
                 })}
             </div>

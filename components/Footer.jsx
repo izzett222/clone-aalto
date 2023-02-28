@@ -22,7 +22,7 @@ export default function Footer() {
     edit,
   ];
   return (
-    <footer className="bg-[#2D2D2D] pt-20">
+    <footer className="bg-[#2D2D2D] pt-2.5">
       <div className="border-t border-t-white pt-6">
         <Wrapper>
           <div className="flex flex-col sm:flex-row flex-wrap border-b border-b-white pb-6">

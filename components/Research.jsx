@@ -25,13 +25,13 @@ export default function Research() {
             return (
               <div
                 key={i}
-                className={`bg-[#2D2D2D] flex-1`}
+                className={`bg-[#2D2D2D] flex-1 group hover:cursor-pointer`}
               >
                 <div className="relative w-full aspect-[819/356]">
-                  <Image alt="" src={el.img} className="object-cover" fill />
+                  <Image alt="" src={el.img} className="object-cover group-hover:brightness-[0.8]" fill />
                 </div>
                 <div className="p-4 pb-3">
-                  <h4 className="text--md">{el.title}</h4>
+                  <h4 className="text--md group-hover:bg-[#4a4a4a] w-fit">{el.title}</h4>
                   <p className="text mb-[28px] mt-[25px]">{el.text}</p>
                   <span className="text--sm">{el.date}</span>
                 </div>

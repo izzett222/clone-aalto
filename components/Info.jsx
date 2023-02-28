@@ -25,7 +25,7 @@ export default function Info() {
   return (
     <div className="py-14 ">
       <Wrapper>
-        <h2 className="heading mb-4">
+        <h2 className="heading mb-4 md:mb-11">
           {" "}
           Information on Ukraine and coronavirus
         </h2>
@@ -34,10 +34,10 @@ export default function Info() {
             return (
               <div
                 key={i}
-                className="flex h-[82px] sm:h-[120px] border border-white"
+                className="flex h-[82px] sm:h-[120px] border border-white group hover:cursor-pointer"
               >
                 <div className="flex-1 flex flex-col justify-end px-3 sm:px-6 pt-3 sm:pt-6 pb-2 sm:pb-4">
-                  <h3 className="text--md mb-2">{el.title}</h3>
+                  <h3 className="text--md mb-2 group-hover:bg-[#4a4a4a] w-fit">{el.title}</h3>
                   <div className="overflow-hidden w-full h-[25px] hidden sm:block">
                     <p className="text--sm overflow-hidden h-[25px]">
                       {el.text}
@@ -45,7 +45,7 @@ export default function Info() {
                   </div>
                 </div>
                 <div className="w-[82px] h-[82px] sm:w-[120px] sm:h-[120px] relative">
-                  <Image src={el.img} alt="" fill className="object-cover" />
+                  <Image src={el.img} alt="" fill className="object-cover group-hover:brightness-[0.8]" />
                 </div>
               </div>
             );

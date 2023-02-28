@@ -11,15 +11,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
-      },
+      // fontFamily: {
+      //   sans: ['var(--font-inter)', ...fontFamily.sans],
+      // },
       screens: {
         md: "900px",
         xl: "1200px"
       },
       colors: {
         primary: "#0058AD"
+      },
+      spacing: {
+        open: "calc(100vh - 110px)",
+        raised: "calc(100vh - 50px)"
+      },
+      minHeight: {
+        open: "calc(100vh - 110px)",
+        raised: "calc(100vh - 50px)"
       }
     },
   },

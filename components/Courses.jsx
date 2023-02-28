@@ -29,15 +29,15 @@ export default function Courses() {
             return (
               <div
                 key={i}
-                className={` bg-[#2D2D2D] ${
+                className={` bg-[#2D2D2D]  group hover:cursor-pointer ${
                   i === 0 ? "w-full md:w-auto md:flex-1" : "flex-1"
                 }`}
               >
                 <div className="relative w-full aspect-[819/356]">
-                  <Image alt="" src={el.img} className="object-cover" fill />
+                  <Image alt="" src={el.img} className="object-cover group-hover:brightness-[0.8]" fill />
                 </div>
                 <div className="p-4 pb-3">
-                  <h4 className="text--md">{el.title}</h4>
+                  <h4 className="text--md group-hover:bg-[#4A4A4A] w-fit">{el.title}</h4>
                   <p className="text mb-[28px] mt-[25px]">{el.text}</p>
                   <span className="text--sm">{el.date}</span>
                 </div>
